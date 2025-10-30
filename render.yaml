@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: testlink
+    env: docker
+    dockerCommand: >
+      /opt/bitnami/scripts/testlink/run.sh
+    plan: free
+    envVars:
+      - key: ALLOW_EMPTY_PASSWORD
+        value: yes
+      - key: TESTLINK_USERNAME
+        value: admin
+      - key: TESTLINK_PASSWORD
+        value: admin
+    ports:
+      - 8080
