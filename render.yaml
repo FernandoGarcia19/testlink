@@ -2,10 +2,10 @@ services:
   - type: web
     name: testlink
     env: docker
-    image: bitnami/testlink:latest
     plan: free
-    dockerCommand: >
-      /opt/bitnami/scripts/testlink/run.sh
+    image:
+      image: bitnami/testlink:latest
+    dockerCommand: /opt/bitnami/scripts/testlink/run.sh
     envVars:
       - key: ALLOW_EMPTY_PASSWORD
         value: yes
