@@ -2,6 +2,7 @@ services:
   - type: web
     name: testlink
     env: docker
+    image: bitnami/testlink:latest
     plan: free
     dockerCommand: >
       /opt/bitnami/scripts/testlink/run.sh
