@@ -23,5 +23,3 @@ services:
         value: admin
       - key: TESTLINK_PASSWORD
         value: admin
-    ports:
-      - 8080
