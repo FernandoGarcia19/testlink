@@ -2,12 +2,22 @@ services:
   - type: web
     name: testlink
     env: docker
+    plan: free
     dockerCommand: >
       /opt/bitnami/scripts/testlink/run.sh
-    plan: free
     envVars:
       - key: ALLOW_EMPTY_PASSWORD
         value: yes
+      - key: MARIADB_HOST
+        value: maglev.proxy.rlwy.net
+      - key: MARIADB_PORT_NUMBER
+        value: 47806
+      - key: MARIADB_DATABASE
+        value: railway
+      - key: MARIADB_USER
+        value: root
+      - key: MARIADB_PASSWORD
+        value: haeJTvaIHEzSVMzgyogoLOuTYDaTVOrE
       - key: TESTLINK_USERNAME
         value: admin
       - key: TESTLINK_PASSWORD
